@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<nav th:replace="layouts :: navbar"></nav>
+
+<br><br>
+<div>
+    <h4>Current Projects</h4>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Project Name </th>
+            <th>Project Stage </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="aProject : ${projects}">
+            <td th:text="${aProject.name}">1 </td>
+            <td th:text="${aProject.stage}">2 </td>
+<!--            <td><a th:href=@{/projects/update/{id}(id=${project.projectId})}">Edit</a></td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br><br><br>
+<div>
+    <h4>Current Employees</h4>
+    <table>
+        <thead class="table table-bordered table-striped">
+        <tr  class="thead-dark">
+            <th>Employee First Name</th>
+            <th>Employee Last Name</th>
+            <th>Employee Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="aEmployee : ${employees}">
+            <td th:text="${aEmployee.firstName}">1 </td>
+            <td th:text="${aEmployee.lastName}">2 </td>
+            <td th:text="${aEmployee.email}">2 </td>
+<!--            <td><a th:href="@{/employees/edit/{employeeId}(id=${aEmployee.employeeId})}">Edit</a></td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br><br>
+<a th:href="@{/projects/new}" class="btn btn-primary btn-sm mb-3">Add Project</a>
+    <br>
+<a th:href="@{/employees/new}" class="btn btn-primary btn-sm mb-3">Add Employees</a>
+
+
+</body>
+</html>

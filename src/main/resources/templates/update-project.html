@@ -1,0 +1,62 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://wwww.thymeleaf.org">-->
+<!--<head>-->
+<!--    &lt;!&ndash; Required meta tags &ndash;&gt;-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--<nav th:replace="layouts :: navbar"></nav>-->
+<!--<br><br>-->
+<!--<div class="container">-->
+<!--    <form action="#"-->
+<!--          th:action="@{/projects/update/{id}(id=${project.projectId})}"-->
+<!--          th:object="${project}"-->
+<!--          method="post">-->
+
+<!--        <input type="text" placeholder="Project Name" th:field="${project.name}" >-->
+
+<!--        <select th:field="${project.stage}">-->
+<!--            <option th:value="NOTSTARTED"> Not Started</option>-->
+<!--            <option th:value="INPROGRESS"> In Progress</option>-->
+<!--            <option th:value="COMPLETED"> Completed</option>-->
+<!--        </select>-->
+
+<!--        <textarea type="text" placeholder="Enter Project Description" th:field="${project.description}" ></textarea>-->
+
+<!--        &lt;!&ndash;        //you can use "${project.employees} in the field, astrick is short form&ndash;&gt;-->
+<!--        <select th:field="*{employees}" multiple="multiple">-->
+<!--            <option th:each = "employee : ${allEmployees}"-->
+<!--                    th:value=" ${employee.employeeId}"-->
+<!--                    th:text=" ${employee.firstName}">-->
+<!--            </option>-->
+<!--        </select>-->
+
+<!--        <button type="submit">Create Project</button>-->
+
+<!--    </form>-->
+<!--</div>-->
+
+
+
+<!--</body>-->
+<!--</html>-->
+
+<!--&lt;!&ndash;<form action="#"&ndash;&gt;-->
+<!--&lt;!&ndash;          th:action="@{/update/{id}(id=${user.id})}"&ndash;&gt;-->
+<!--&lt;!&ndash;          th:object="${user}"&ndash;&gt;-->
+<!--&lt;!&ndash;          method="post">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label for="name">Name</label>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="text" th:field="*{name}" id="name" placeholder="Name">&ndash;&gt;-->
+<!--&lt;!&ndash;        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;        <label for="email">Email</label>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="text" th:field="*{email}" id="email" placeholder="Email">&ndash;&gt;-->
+<!--&lt;!&ndash;        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="submit" value="Update User">&ndash;&gt;-->
+<!--&lt;!&ndash;    </form>&ndash;&gt;-->
